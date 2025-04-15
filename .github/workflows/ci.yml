@@ -4,17 +4,15 @@ on:
   push:
     branches: 
       - master
-  workflow_dispatch:
-
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.event.repository.fork == false
-
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.8
 
@@ -35,5 +33,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
