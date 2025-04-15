@@ -1,4 +1,4 @@
-site_name: A journey through the mystical land of CUDA
+site_name: A Journey Through the Mystical Land of CUDA
 site_url: https://www.warpwarrior.com
 site_description: Learn important machine learning concepts hands-on by writing PyTorch code.
 
@@ -10,47 +10,50 @@ theme:
   logo: assets/warpwarrior_orange.png
   favicon: assets/warpwarrior_orange.png
   features:
-    - navigation.instant
     - navigation.top
+    - navigation.instant
+    - content.code.copy
+    - content.tabs.link
   palette:
-    # Palette toggle for light mode
-    - scheme: black
-      primary: black
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - scheme: slate
       primary: black
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to light mode
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
 
 markdown_extensions:
   - meta
+  - admonition
+  - toc:
+      permalink: true
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  
-plugins:
- - mkdocs-jupyter:
-    include_source: True
- - search
- - social
 
-edit_uri: ""
+plugins:
+  - mkdocs-jupyter:
+      include_source: true
+  - search
+  - social
 
 nav:
-  - Home: 'index.md'
-  - 00. The Tao of the GPU: '00_The_Tao_of_the_GPU.ipynb'
+  - Home: index.md
+  - 00. The Tao of the GPU: 00_The_Tao_of_the_GPU.ipynb
+
 extra:
   social:
     - icon: fontawesome/brands/github
