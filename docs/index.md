@@ -23,7 +23,6 @@ It is a journey forged in cores, threads, and fire, and only those of relentless
 | CUDA Programming Model | Threads, Blocks, Grids, Warps — how the GPU executes kernels |
 | Your First Kernel    | Write and launch your first CUDA kernel              |
 | Compilation & Runtime| nvcc, .cu files, device vs host code                 |
-| Debugging & Synchronization | `cudaDeviceSynchronize()`, `cudaErrorCheck`, basics of `printf` debugging |
 
 ---
 
