@@ -52,7 +52,7 @@ plugins:
 
 nav:
   - Home: index.md
-  - 00. The Tao of the GPU: 00_The_Tao_of_the_GPU.ipynb
+  - Phase 1 The Inititation: 00_The_Initiation.ipynb
 
 extra:
   social:
